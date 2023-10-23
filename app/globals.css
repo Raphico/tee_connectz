@@ -8,6 +8,8 @@
       --foreground: 0 0% 8%;
       --accent: 215 66% 41%;
 
+      --mute: 99 18% 40%;
+
       --border: 200 14% 92%;
    }
 }
@@ -18,5 +20,31 @@
    }
    body {
       @apply bg-background text-foreground;
+   }
+}
+
+@layer utilities {
+   .max-width {
+      @apply max-w-[90em] mx-auto px-6;
+   }
+
+   .heading1 {
+      @apply text-3xl sm:text-5xl font-bold;
+   }
+
+   .heading2 {
+      @apply text-2xl sm:text-3xl font-bold;
+   }
+
+   .heading3 {
+      @apply text-xl sm:text-2xl font-bold;
+   }
+
+   .body-text {
+      @apply text-base sm:text-lg;
+   }
+
+   .base-regular {
+      @apply text-sm sm:text-base;
    }
 }
