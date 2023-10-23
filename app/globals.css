@@ -23,6 +23,16 @@
    }
 }
 
+@layer components {
+   .btn {
+      @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+   }
+
+   .category-btn {
+      @apply text-mute px-4 py-2 whitespace-nowrap !rounded-full capitalize hover:bg-border/50;
+   }
+}
+
 @layer utilities {
    .max-width {
       @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;

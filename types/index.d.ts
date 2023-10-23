@@ -6,3 +6,10 @@ export interface FooterItem {
       external: boolean
    }[]
 }
+
+export interface Category {
+   _id: string
+   name: string
+   slug: string
+   description: string
+}
