@@ -1,5 +1,6 @@
 import Filters from "@/components/filters"
 import { getAllPosts, getCategories, getPostsByCategory } from "@/sanity/utils"
+import PostItem from "@/components/post-item"
 
 export const revalidate = 60
 
@@ -26,9 +27,13 @@ const BlogPage = async ({ searchParams }: Props) => {
          <Filters categories={categories} />
 
          {posts.length === 0 ? (
-            <p className="body-text font-semibold text-center">No posts</p>
+            <p className="body-text font-bold text-center">No posts</p>
          ) : (
-            <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+               {posts.map((post) => (
+                  <PostItem key={post._id} post={post} />
+               ))}
+            </div>
          )}
       </div>
    )
