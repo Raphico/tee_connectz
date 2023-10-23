@@ -1,9 +1,11 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
+import { font_sans, font_mono } from "@/lib/fonts"
 
 export const metadata: Metadata = {
-   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
+   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
    title: {
       default: siteConfig.title,
       template: `%s | ${siteConfig.title}`,
@@ -46,7 +48,15 @@ export default function RootLayout({
 }) {
    return (
       <html lang="en">
-         <body>{children}</body>
+         <body
+            className={cn(
+               "bg-background font-sans antialiased",
+               font_mono.variable,
+               font_sans.variable
+            )}
+         >
+            <main>{children}</main>
+         </body>
       </html>
    )
 }
