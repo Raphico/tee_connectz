@@ -1,10 +1,18 @@
 import Filters from "@/components/filters"
-import { getCategories } from "@/sanity/utils"
+import { getAllPosts, getCategories, getPostsByCategory } from "@/sanity/utils"
 
 export const revalidate = 60
 
-const BlogPage = async () => {
+interface Props {
+   searchParams: { [key: string]: string | undefined }
+}
+
+const BlogPage = async ({ searchParams }: Props) => {
    const categories = await getCategories()
+   const posts = searchParams.category
+      ? await getPostsByCategory(searchParams.category)
+      : await getAllPosts()
+
    return (
       <div className="max-width">
          <section className="max-w-2xl space-y-3">
@@ -16,6 +24,12 @@ const BlogPage = async () => {
          </section>
 
          <Filters categories={categories} />
+
+         {posts.length === 0 ? (
+            <p className="body-text font-semibold text-center">No posts</p>
+         ) : (
+            <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+         )}
       </div>
    )
 }
