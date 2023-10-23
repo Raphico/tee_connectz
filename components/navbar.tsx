@@ -10,11 +10,11 @@ const Navbar = () => {
                <Image
                   src="/logo.png"
                   alt={`${siteConfig.title} logo`}
-                  width={40}
-                  height={40}
+                  width={30}
+                  height={30}
                   className="rounded-full"
                />
-               <h3 className="font-mono uppercase heading3">
+               <h3 className="font-mono uppercase text-[20px] font-bold">
                   {siteConfig.title}
                </h3>
             </Link>
