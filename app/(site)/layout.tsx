@@ -1,6 +1,10 @@
+import "../globals.css"
+
 import type { Metadata } from "next"
-import "./globals.css"
 import { siteConfig } from "@/config/site"
+
+import Navbar from "@/components/navbar"
+
 import { cn } from "@/lib/utils"
 import { font_sans, font_mono } from "@/lib/fonts"
 
@@ -55,7 +59,10 @@ export default function RootLayout({
                font_sans.variable
             )}
          >
-            <main>{children}</main>
+            <main>
+               <Navbar />
+               {children}
+            </main>
          </body>
       </html>
    )
