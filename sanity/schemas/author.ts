@@ -34,6 +34,36 @@ const author = defineType({
          validation: (rule: ImageRule) => rule.required(),
       }),
       defineField({
+         name: "socials",
+         title: "Socials",
+         type: "array",
+         of: [
+            {
+               type: "object",
+               fields: [
+                  {
+                     name: "platform",
+                     title: "Platform",
+                     type: "string",
+                     options: {
+                        list: [
+                           { title: "Facebook", value: "facebook" },
+                           { title: "Whatsapp", value: "whatsapp" },
+                           { title: "Instagram", value: "instagram" },
+                        ],
+                        layout: "dropdown",
+                     },
+                  },
+                  {
+                     name: "url",
+                     title: "URL",
+                     type: "url",
+                  },
+               ],
+            },
+         ],
+      }),
+      defineField({
          name: "bio",
          title: "Bio",
          type: "array",
