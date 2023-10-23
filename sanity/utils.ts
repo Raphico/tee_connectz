@@ -63,3 +63,29 @@ export const getPostsByCategory = async (
       return []
    }
 }
+
+export const getPost = async (slug: string): Promise<PostItem> => {
+   return await client.fetch(
+      groq`*[_type == "post" && slug.current == $slug][0] {
+      _id,
+      title,
+      description,
+      "image": image.asset->url,
+      "slug": slug.current,
+      tags[]->{
+         _id,
+         "slug": slug.current,
+         name,
+         description
+      },
+      author->{
+         _id,
+         name,
+         "image": image.asset->url
+      },
+      publishedAt, 
+      content,
+   }`,
+      { slug }
+   )
+}
