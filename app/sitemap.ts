@@ -4,7 +4,7 @@ import { MetadataRoute } from "next"
 export default function sitemap(): MetadataRoute.Sitemap {
    return [
       {
-         url: absoluteUrl("/blog"),
+         url: absoluteUrl("/"),
          lastModified: new Date(),
       },
    ]

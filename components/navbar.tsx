@@ -6,7 +6,7 @@ const Navbar = () => {
    return (
       <header className="w-full border-b py-4">
          <nav className="max-width">
-            <Link className="flex items-center gap-2" href="/blog">
+            <Link className="flex items-center gap-2" href="/">
                <Image
                   src="/logo.png"
                   alt={`${siteConfig.title} logo`}
