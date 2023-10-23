@@ -23,18 +23,17 @@ const PostItem = ({ post }: PostItemProps) => {
          </Link>
 
          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2">
-               <Image
-                  src={post.author.image}
-                  alt="author image"
-                  width={30}
-                  height={30}
-                  className="rounded-full"
-               />
-               <p className="base-bold">{post.author.name}</p>
-            </div>
-
-            <p className="text-tag-foreground base-regular">
+            {post.categories.map((category) => (
+               <Link
+                  key={category._id}
+                  href={`?category=${category.slug}`}
+                  className="btn text-[.75em] px-2.5 py-0.5 rounded-full"
+               >
+                  {category.name}
+               </Link>
+            ))}
+            <p className="text-mute body-text">•</p>
+            <p className="text-mute base-regular">
                {formatDate(post.publishedAt)}
             </p>
          </div>
@@ -44,15 +43,6 @@ const PostItem = ({ post }: PostItemProps) => {
          >
             {post.title}
          </Link>
-         {post.categories.map((category) => (
-            <Link
-               key={category._id}
-               href={`?category=${category.slug}`}
-               className="btn text-[.75em] px-2.5 py-0.5 rounded-full"
-            >
-               {category.name}
-            </Link>
-         ))}
       </div>
    )
 }

@@ -22,10 +22,5 @@ export interface PostItem {
    image: string
    publishedAt: string
    categories: Category[]
-   author: {
-      _id: string
-      name: string
-      image: string
-   }
    content: PortableTextBlock[]
 }

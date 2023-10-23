@@ -5,5 +5,5 @@ import category from "./schemas/category"
 import post from "./schemas/post"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-   types: [author, category, content, post],
+   types: [category, content, post],
 }

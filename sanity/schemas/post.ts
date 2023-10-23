@@ -25,15 +25,6 @@ const post = defineType({
          type: "text",
       }),
       defineField({
-         name: "author",
-         title: "Author",
-         type: "reference",
-         validation: (rule: ReferenceRule) => rule.required(),
-         to: {
-            type: "author",
-         },
-      }),
-      defineField({
          name: "slug",
          title: "Slug",
          type: "slug",
@@ -77,11 +68,12 @@ const post = defineType({
          title: "title",
          publishedAt: "publishedAt",
          media: "image",
-         author: "author",
       },
-      prepare: ({ title, publishedAt, media, author }) => ({
+      prepare: ({ title, publishedAt, media }) => ({
          title,
-         subtitle: `${author} | ${new Date(publishedAt).toLocaleDateString()}`,
+         subtitle: `Tee Connectz | ${new Date(
+            publishedAt
+         ).toLocaleDateString()}`,
          media,
       }),
    },

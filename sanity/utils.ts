@@ -30,11 +30,6 @@ export const getAllPosts = async (): Promise<PostItem[]> => {
             name,
             description
          },
-         author->{
-            _id,
-            name,
-            "image": image.asset->url
-         },
          publishedAt,     
       }`)
    } catch (error) {
@@ -58,11 +53,6 @@ export const getPostsByCategory = async (
             "slug": slug.current,
             name,
             description
-         },
-         author->{
-            _id,
-            name,
-            "image": image.asset->url
          },
          publishedAt,     
       }`,
