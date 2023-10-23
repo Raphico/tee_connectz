@@ -9,6 +9,7 @@ const Logo = () => {
             alt={`${siteConfig.title}'s logo`}
             width={30}
             height={30}
+            className="rounded-full"
          />
       </div>
    )

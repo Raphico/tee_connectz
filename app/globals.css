@@ -25,7 +25,7 @@
 
 @layer utilities {
    .max-width {
-      @apply max-w-[90em] mx-auto px-6;
+      @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
    }
 
    .heading1 {
