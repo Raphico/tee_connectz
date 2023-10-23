@@ -27,7 +27,7 @@ const PostItem = ({ post }: PostItemProps) => {
                <Link
                   key={category._id}
                   href={`?category=${category.slug}`}
-                  className="btn text-[.75em] px-2.5 py-0.5 rounded-full"
+                  className="btn text-accent bg-accent/10 base-regular px-2.5 py-0.5 rounded-full"
                >
                   {category.name}
                </Link>
