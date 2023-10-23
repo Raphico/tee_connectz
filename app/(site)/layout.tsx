@@ -59,10 +59,8 @@ export default function RootLayout({
                font_sans.variable
             )}
          >
-            <main>
-               <Navbar />
-               {children}
-            </main>
+            <Navbar />
+            <main className="py-10">{children}</main>
          </body>
       </html>
    )
