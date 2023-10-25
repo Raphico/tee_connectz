@@ -14,7 +14,7 @@ export const POST = async (req: Request) => {
       .parse(await req.json())
 
    try {
-      await mailchimp.lists.addListMember(process.env.MAILCHIMP_AUDIENCE_ID, {
+      await mailchimp.lists.addListMember(process.env.MAILCHIMP_AUDIENCE_ID!, {
          email_address: email,
          status: "subscribed",
       })
