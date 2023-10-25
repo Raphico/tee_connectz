@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="flex items-center justify-center text-center flex-col gap-6">
          <div className="flex items-center gap-2">
             <Logo />
-            <h3 className="font-mono uppercase text-[20px] font-bold">
+            <h3 className="font-mono uppercase base-regular font-bold">
                {siteConfig.title}
             </h3>
          </div>
@@ -23,8 +23,8 @@ const Footer = () => {
                   <Image
                      src={link.icon}
                      alt={`${link.name} icon`}
-                     width={30}
-                     height={30}
+                     width={25}
+                     height={25}
                   />
                </Link>
             ))}
