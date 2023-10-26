@@ -1,6 +1,7 @@
 import Filters from "@/components/filters"
 import { getAllPosts, getCategories, getPostsByCategory } from "@/sanity/utils"
 import PostItem from "@/components/post-item"
+import JoinNewsletterForm from "@/components/join-newsletter-form"
 
 export const revalidate = 60
 
@@ -35,6 +36,14 @@ const BlogPage = async ({ searchParams }: Props) => {
                ))}
             </div>
          )}
+
+         <div className="w-full my-16 sm:my-20 h-[1px] bg-border" />
+
+         <div className="w-full flex flex-col items-center justify-center gap-2">
+            <h2 className="heading2">Join our newsletter</h2>
+            <JoinNewsletterForm />
+            <p className="base-regular">Unsubscribe anytime</p>
+         </div>
       </div>
    )
 }
