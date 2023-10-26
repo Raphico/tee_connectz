@@ -14,7 +14,7 @@ const JoinNewsletterForm = () => {
 
       setIsLoading(true)
 
-      const response = await fetch("/api/email/newsletter", {
+      const response = await fetch("/api/newsletter", {
          body: JSON.stringify({ email }),
          headers: { "Content-Type": "application/json" },
          method: "POST",
