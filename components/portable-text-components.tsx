@@ -19,12 +19,12 @@ export const PortableTextComponents = {
    },
    list: {
       bullet: ({ children }: any) => (
-         <ul className="pl-10 list-disc space-y-5 body-regular !mt-7">
+         <ul className="pl-10 list-disc space-y-5 body-regular !mt-8">
             {children}
          </ul>
       ),
       number: ({ children }: any) => (
-         <ol className="pl-10 list-disc space-y-5 body-regular !mt-7">
+         <ol className="pl-10 list-decimal space-y-5 body-regular !mt-8">
             {children}
          </ol>
       ),
@@ -46,7 +46,7 @@ export const PortableTextComponents = {
          <blockquote className="border-l-4 p-5">{children}</blockquote>
       ),
       normal: ({ children }: any) => (
-         <p className="body-regular !mt-7">{children}</p>
+         <p className="body-regular !mt-4">{children}</p>
       ),
    },
    marks: {
