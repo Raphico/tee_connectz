@@ -9,7 +9,7 @@ interface PostItemProps {
 
 const PostItem = ({ post }: PostItemProps) => {
    return (
-      <div className="flex flex-col items-start gap-2">
+      <div className="flex flex-col items-start gap-4">
          <Link
             className="relative block shadow-md w-full h-56 z-0"
             href={`/${post.slug}`}
@@ -37,10 +37,7 @@ const PostItem = ({ post }: PostItemProps) => {
                {formatDate(post.publishedAt)}
             </p>
          </div>
-         <Link
-            href={`/blog/${post.slug}`}
-            className="hover:underline paragraph-bold"
-         >
+         <Link href={`/blog/${post.slug}`} className="hover:underline heading3">
             {post.title}
          </Link>
       </div>
