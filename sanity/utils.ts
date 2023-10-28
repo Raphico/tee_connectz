@@ -72,7 +72,7 @@ export const getPost = async (slug: string): Promise<PostItem> => {
       description,
       "image": image.asset->url,
       "slug": slug.current,
-      tags[]->{
+      categories[]->{
          _id,
          "slug": slug.current,
          name,

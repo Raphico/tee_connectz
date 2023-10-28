@@ -63,9 +63,7 @@ const PostPage = async ({ params }: Props) => {
       <main className="w-full max-w-3xl mx-auto px-6 space-y-10 y-paddings">
          <div className="space-y-5">
             <h1 className="post-title">{post.title}</h1>
-            <p className="body-regular text-tag-foreground">
-               {post.description}
-            </p>
+            <p className="body-text text-tag-foreground">{post.description}</p>
 
             <div className="flex items-center gap-3">
                {post.categories.map((category) => (
@@ -84,7 +82,7 @@ const PostPage = async ({ params }: Props) => {
             </div>
          </div>
 
-         <div className="relative block shadow-md w-full h-96 z-0">
+         <div className="relative block shadow-md w-full h-80 sm:h-96 z-0">
             <Image
                src={post.image}
                alt={`${post.title} featured image`}

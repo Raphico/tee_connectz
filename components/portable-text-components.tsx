@@ -46,7 +46,7 @@ export const PortableTextComponents = {
          <blockquote className="border-l-4 p-5">{children}</blockquote>
       ),
       normal: ({ children }: any) => (
-         <p className="body-regular !mt-4">{children}</p>
+         <p className="body-text !mt-4">{children}</p>
       ),
    },
    marks: {
