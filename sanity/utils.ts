@@ -43,7 +43,7 @@ export const getPostsByCategory = async (
 ): Promise<PostItem[]> => {
    try {
       return await client.fetch(
-         `*[_type == "post" && references(*[_type == "tag" && slug.current == $category]._id)] | order(publishedAt desc) {
+         `*[_type == "post" && references(*[_type == "category" && slug.current == $category]._id)] | order(publishedAt desc) {
          _id,
          title,
          "image": image.asset->url,
