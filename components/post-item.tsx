@@ -13,6 +13,8 @@ const PostItem = ({ post }: PostItemProps) => {
          <Link
             className="relative block shadow-md w-full h-56 z-0"
             href={`/${post.slug}`}
+            tabIndex="-1"
+            aria-hidden="true"
          >
             <Image
                src={post.image}
