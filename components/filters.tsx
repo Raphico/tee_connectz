@@ -21,7 +21,7 @@ const Filters = ({ categories }: FiltersProps) => {
    }
 
    return (
-      <ul className="flex w-full flex-wrap gap-2 overflow-auto pt-16 pb-10 sm:pb-12">
+      <ul className="flex w-full flex-wrap gap-4 overflow-auto pt-16 pb-10 sm:pb-12">
          <button
             className={cn("btn category-btn", {
                "bg-accent/10 text-accent": !searchParams.has("category"),
