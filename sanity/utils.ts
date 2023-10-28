@@ -5,7 +5,7 @@ import { PostItem } from "@/types"
 
 export const getCategories = async (): Promise<Category[]> => {
    try {
-      return await client.fetch(groq`*[_type == "tag"]{
+      return await client.fetch(groq`*[_type == "category"]{
          _id,
          name,
          "slug": slug.current,
