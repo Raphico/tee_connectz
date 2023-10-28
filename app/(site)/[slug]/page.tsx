@@ -28,6 +28,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
    const post = await getPost(params.slug)
 
+   if (!post) {
+      return notFound()
+   }
+
    return {
       metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
       title: post.title,

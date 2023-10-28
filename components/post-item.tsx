@@ -37,7 +37,7 @@ const PostItem = ({ post }: PostItemProps) => {
                {formatDate(post.publishedAt)}
             </p>
          </div>
-         <Link href={`/blog/${post.slug}`} className="hover:underline heading3">
+         <Link href={`/${post.slug}`} className="hover:underline heading3">
             {post.title}
          </Link>
       </div>
