@@ -29,7 +29,7 @@
    }
 
    .category-btn {
-      @apply text-mute px-4 py-2 whitespace-nowrap !rounded-full capitalize hover:bg-border/50;
+      @apply text-mute text-base sm:text-lg px-4 py-2 whitespace-nowrap !rounded-full capitalize hover:bg-border/50;
    }
 }
 
